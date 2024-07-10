@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frima</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: '#fafafa',
+                100: '#f5f5f5',
+                200: '#e5e5e5',
+                300: '#d4d4d4',
+                400: '#a3a3a3',
+                500: '#737373',
+                600: '#525252',
+                700: '#404040',
+                800: '#262626',
+                900: '#171717',
+                950: '#0a0a0a',
+              },
+              accent: {
+                50: '#fff7ed',
+                100: '#ffedd5',
+                200: '#fed7aa',
+                300: '#fdba74',
+                400: '#fb923c',
+                500: '#f97316',
+                600: '#ea580c',
+                700: '#c2410c',
+                800: '#9a3412',
+                900: '#7c2d12',
+                950: '#431407',
+              },
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+      }
+      @media only screen and (min-width: 1024px) {
+        main {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          grid-template-rows: repeat(9, 180px);
+          grid-template-areas:
+            'i c r p1'
+            'i c r p1'
+            'i d d p1'
+            'i d d p1'
+            's d d p2'
+            's d d p2'
+            'n n t p2'
+            'n n t p2'
+            'f f f f'
+            'f f f f'
+            'f f f f';
+        }
+
+        .grid-i {
+          grid-area: i;
+        }
+        .grid-c {
+          grid-area: c;
+        }
+        .grid-r {
+          grid-area: r;
+        }
+        .grid-p1 {
+          grid-area: p1;
+        }
+        .grid-p2 {
+          grid-area: p2;
+        }
+        .grid-d {
+          grid-area: d;
+        }
+        .grid-s {
+          grid-area: s;
+        }
+        .grid-n {
+          grid-area: n;
+        }
+        .grid-t {
+          grid-area: t;
+        }
+        .grid-f {
+          grid-area: f;
+        }
+      }
+    </style>
+  </head>
+  <body class="font-sans bg-primary-50 dark:bg-primary-950">
+    <main class="max-w-[100rem] mx-auto px-2 md:px-4 min-h-dvh gap-4 p-2">
+      <section class="p-2 border rounded-md md:p-4 grid-i">
+        <div class="space-y-8">
+          <div class="flex">
+            <img
+              class="w-12 h-12 mr-2 rounded-full"
+              src="https://blog.gederooney.me/_next/image?url=%2Fstatic%2Fimages%2Favatar.png&w=96&q=75"
+              alt="" />
+            <div class="">
+              <h1 class="text-2xl font-bold">Rony Gédéon</h1>
+              <p class="text-xs font-light text-primary-700">
+                Photographe Professionnel
+              </p>
+            </div>
+          </div>
+          <div class="space-y-4">
+            <p class="text-3xl font-medium font">
+              <span
+                class="text-[4rem] text-transparent bg-clip-text bg-gradient-to-r from-primary-950 to-accent-600"
+                >Bonjour</span
+              >,
+            </p>
+            <p class="text-xl font-light text-primary-700">
+              Je suis un photographe professionnel basé à Montréal. Je fais des
+              portraits, et j'adore capturer des moments de la vie quotidienne.
+            </p>
+
+            <p class="text-xl font-light text-primary-700">
+              Je suis disponible pour des collaborations et des projets de
+              toutes sortes. N'hésitez pas à me
+              <a
+                href="mailto:email@test.com"
+                class="font-medium text-accent-600">
+                contacter
+              </a>
+              pour plus d'informations.
+            </p>
+          </div>
+          <h2
+            class="text-[2rem] xl:text-[4rem] text-transparent bg-clip-text bg-gradient-to-r from-primary-950 to-accent-600">
+            Suivez moi
+          </h2>
+          <div
+            class="grid justify-center w-full grid-cols-4 gap-4 mt-4 md:grid-cols-8 lg:grid-cols-4 gap-y-4">
+            <a
+              href="#_"
+              class="flex items-center justify-center w-12 h-12 transition-all duration-300 rounded-lg shadow-xl aspect-square dark:shadow-thick hover:bg-primary-100 dark:hover:bg-primary ring-1 bg-primary-50 dark:ring-primary-50/10 ring-accent-500/50 dark:bg-tertiary hover:ring-accent-500/50 dark:hover:ring-primary-50/20 group">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-6 h-6 duration-300 icon icon-tabler icon-tabler-mail group-hover:scale-125 text-primary dark:text-primary-50 group-hover text-primary:dark:text-primary-50/50"
+                viewBox="0 0 24 24"
+                stroke-width="0.8"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"></path>
+                <path d="M3 7l9 6l9 -6"></path>
+              </svg>
+            </a>
+            <a
+              href="#_"
+              class="flex items-center justify-center w-12 h-12 transition-all duration-300 rounded-lg shadow-xl aspect-square dark:shadow-thick hover:bg-primary-100 dark:hover:bg-primary ring-1 bg-primary-50 dark:ring-primary-50/10 ring-accent-500/50 dark:bg-tertiary hover:ring-accent-500/50 dark:hover:ring-primary-50/20 group">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-6 h-6 duration-300 icon icon-tabler icon-tabler-brand-github group-hover:scale-125 text-primary dark:text-primary-50 group-hover text-primary:dark:text-primary-50/50"
+                viewBox="0 0 24 24"
+                stroke-width="0.8"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
+              </svg>
+            </a>
+            <a
+              href="#_"
+              class="flex items-center justify-center w-12 h-12 transition-all duration-300 rounded-lg shadow-xl aspect-square dark:shadow-thick hover:bg-primary-100 dark:hover:bg-primary ring-1 bg-primary-50 dark:ring-primary-50/10 ring-accent-500/50 dark:bg-tertiary hover:ring-accent-500/50 dark:hover:ring-primary-50/20 group">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-6 h-6 duration-300 icon icon-tabler icon-tabler-brand-behance group-hover:scale-125 text-primary dark:text-primary-50 group-hover text-primary:dark:text-primary-50/50"
+                viewBox="0 0 24 24"
+                stroke-width="0.8"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M3 18v-12h4.5a3 3 0 0 1 0 6a3 3 0 0 1 0 6h-4.5"></path>
+                <path d="M3 12l4.5 0"></path>
+                <path
+                  d="M14 13h7a3.5 3.5 0 0 0 -7 0v2a3.5 3.5 0 0 0 6.64 1"></path>
+                <path d="M16 6l3 0"></path>
+              </svg>
+            </a>
+            <a
+              href="#_"
+              class="flex items-center justify-center w-12 h-12 transition-all duration-300 rounded-lg shadow-xl aspect-square dark:shadow-thick hover:bg-primary-100 dark:hover:bg-primary ring-1 bg-primary-50 dark:ring-primary-50/10 ring-accent-500/50 dark:bg-tertiary hover:ring-accent-500/50 dark:hover:ring-primary-50/20 group">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-6 h-6 duration-300 icon icon-tabler icon-tabler-brand-threads group-hover:scale-125 text-primary dark:text-primary-50 group-hover text-primary:dark:text-primary-50/50"
+                viewBox="0 0 24 24"
+                stroke-width="0.8"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M19 7.5c-1.333 -3 -3.667 -4.5 -7 -4.5c-5 0 -8 2.5 -8 9s3.5 9 8 9s7 -3 7 -5s-1 -5 -7 -5c-2.5 0 -3 1.25 -3 2.5c0 1.5 1 2.5 2.5 2.5c2.5 0 3.5 -1.5 3.5 -5s-2 -4 -3 -4s-1.833 .333 -2.5 1"></path>
+              </svg>
+            </a>
+            <a
+              href="#_"
+              class="flex items-center justify-center w-12 h-12 transition-all duration-300 rounded-lg shadow-xl aspect-square dark:shadow-thick hover:bg-primary-100 dark:hover:bg-primary ring-1 bg-primary-50 dark:ring-primary-50/10 ring-accent-500/50 dark:bg-tertiary hover:ring-accent-500/50 dark:hover:ring-primary-50/20 group">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-6 h-6 duration-300 icon icon-tabler group-hover:scale-125 text-primary dark:text-primary-50 group-hover text-primary:dark:text-primary-50/50 icon-tabler-brand-dribbble"
+                viewBox="0 0 24 24"
+                stroke-width="0.8"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                <path d="M9 3.6c5 6 7 10.5 7.5 16.2"></path>
+                <path d="M6.4 19c3.5 -3.5 6 -6.5 14.5 -6.4"></path>
+                <path d="M3.1 10.75c5 0 9.814 -.38 15.314 -5"></path>
+              </svg>
+            </a>
+            <a
+              href="#_"
+              class="flex items-center justify-center w-12 h-12 transition-all duration-300 rounded-lg shadow-xl aspect-square dark:shadow-thick hover:bg-primary-100 dark:hover:bg-primary ring-1 bg-primary-50 dark:ring-primary-50/10 ring-accent-500/50 dark:bg-tertiary hover:ring-accent-500/50 dark:hover:ring-primary-50/20 group">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-6 h-6 duration-300 icon icon-tabler group-hover:scale-125 text-primary dark:text-primary-50 group-hover text-primary:dark:text-primary-50/50 icon-tabler-brand-x"
+                viewBox="0 0 24 24"
+                stroke-width="0.8"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
+                <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
+              </svg>
+            </a>
+            <a
+              href="#_"
+              class="flex items-center justify-center w-12 h-12 transition-all duration-300 rounded-lg shadow-xl aspect-square dark:shadow-thick hover:bg-primary-100 dark:hover:bg-primary ring-1 bg-primary-50 dark:ring-primary-50/10 ring-accent-500/50 dark:bg-tertiary hover:ring-accent-500/50 dark:hover:ring-primary-50/20 group">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-6 h-6 duration-300 icon icon-tabler group-hover:scale-125 text-primary dark:text-primary-50 group-hover text-primary:dark:text-primary-50/50 icon-tabler-brand-linkedin"
+                viewBox="0 0 24 24"
+                stroke-width="0.8"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
+                <path d="M8 11l0 5"></path>
+                <path d="M8 8l0 .01"></path>
+                <path d="M12 16l0 -5"></path>
+                <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
+              </svg> </a
+            ><a
+              href="#_"
+              class="flex items-center justify-center w-12 h-12 transition-all duration-300 rounded-lg shadow-xl aspect-square dark:shadow-thick hover:bg-primary-100 dark:hover:bg-primary ring-1 bg-primary-50 dark:ring-primary-50/10 ring-accent-500/50 dark:bg-tertiary hover:ring-accent-500/50 dark:hover:ring-primary-50/20 group">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-6 h-6 duration-300 icon icon-tabler group-hover:scale-125 text-primary dark:text-primary-50 group-hover text-primary:dark:text-primary-50/50 icon-tabler-brand-facebook"
+                viewBox="0 0 24 24"
+                stroke-width="0.8"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="overflow-hidden border rounded-md grid-c group">
+        <img
+          src="https://images.pexels.com/photos/610293/pexels-photo-610293.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          alt=""
+          class="object-cover w-full h-full duration-300 rounded-md cursor-pointer group-hover:scale-125" />
+      </section>
+      <section class="overflow-hidden border rounded-md grid-r group">
+        <img
+          src="https://images.pexels.com/photos/10720070/pexels-photo-10720070.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          alt=""
+          class="object-cover w-full h-full duration-300 rounded-md cursor-pointer group-hover:scale-125" />
+      </section>
+      <section class="overflow-hidden grid-p1 group">
+        <img
+          src="https://images.pexels.com/photos/23230635/pexels-photo-23230635/free-photo-of-nourriture-aliments-ville-route.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          class="object-cover w-full h-full duration-300 rounded-md cursor-pointer group-hover:scale-125"
+          alt="" />
+      </section>
+      <section class="overflow-hidden grid-p2 group">
+        <img
+          src="https://images.pexels.com/photos/11250806/pexels-photo-11250806.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          class="object-cover w-full h-full duration-300 rounded-md cursor-pointer group-hover:scale-125"
+          alt="" />
+      </section>
+      <section class="overflow-hidden grid-d group">
+        <img
+          src="https://images.pexels.com/photos/13896801/pexels-photo-13896801.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          class="object-cover w-full h-full duration-300 rounded-md cursor-pointer group-hover:scale-125"
+          alt="" />
+      </section>
+      <section class="overflow-hidden grid-s group">
+        <img
+          src="https://images.pexels.com/photos/1437356/pexels-photo-1437356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          class="object-cover w-full h-full duration-300 rounded-md cursor-pointer group-hover:scale-125"
+          alt="" />
+      </section>
+      <section class="overflow-hidden grid-n group">
+        <img
+          src="https://images.pexels.com/photos/3138807/pexels-photo-3138807.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          class="object-cover w-full h-full duration-300 rounded-md cursor-pointer group-hover:scale-125"
+          alt="" />
+      </section>
+      <section class="overflow-hidden grid-t group">
+        <img
+          src="https://images.pexels.com/photos/9775376/pexels-photo-9775376.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          class="object-cover w-full h-full duration-300 rounded-md cursor-pointer group-hover:scale-125"
+          alt="" />
+      </section>
+      <footer
+        class="flex items-center justify-center p-4 text-xs text-center rounded-md text-primary-50 grid-f bg-accent-600 font-extralight">
+        <form action=""></form>
+        <p>&copy; 2024 Rony Gédéon. Tous droits réservés.</p>
+      </footer>
+    </main>
+  </body>
+</html>
